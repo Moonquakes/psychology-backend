@@ -13,8 +13,8 @@ public class UserBasicFuncController {
     @Autowired
     private UserBasicFuncService userBasicFuncService;
 
-    @PostMapping(value = "/getTargetUserInfo")
-    public UserInfoVO getTargetUserInfo(@RequestBody UserEmailParam param){
-        return userBasicFuncService.getTargetUserInfo(param.getUserEmail());
+    @GetMapping(value = "/getTargetUserInfo")
+    public UserInfoVO getTargetUserInfo(@RequestParam(value="userEmail") String userEmail){
+        return userBasicFuncService.getTargetUserInfo(userEmail);
     }
 }

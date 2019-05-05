@@ -50,7 +50,7 @@ public class ForumController {
     }
 
     @GetMapping(value = "/getTargetTopic")
-    public TargetTopicVO getTargetTopic(@RequestBody TopicIdParam param){
-        return forumService.getTargetTopic(param.getTopicId());
+    public TargetTopicVO getTargetTopic(@RequestParam(value="topicId") int topicId){
+        return forumService.getTargetTopic(topicId);
     }
 }
