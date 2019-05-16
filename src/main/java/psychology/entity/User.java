@@ -18,4 +18,9 @@ public class User {
 
     @Column
     private String password = "";
+
+
+    public String getUsename() {
+        return usename;
+    }
 }
